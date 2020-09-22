@@ -45,22 +45,22 @@ def plot(df, type_what):
 if __name__ == '__main__':
     import sys
     import os
-    input_path = '*.csv'
+    input_path = '1234.csv'
     df = pd.read_csv(input_path, skiprows=44)
     input_path = os.path.splitext(input_path)[0]
     plot(df, df)
-    plt.savefig(input_path+"_Original_Conc.png")
+    plt.savefig("result/"+input_path+"_Original_Conc.png")
     plt.show(block=False)
     plt.close()
     plot(df, A280Nor_Conc(df))
-    plt.savefig(input_path+"_A280Nor_Conc.png")
+    plt.savefig("result/"+input_path+"_A280Nor_Conc.png")
     plt.show(block=False)
     plt.close()
     plot(df, MaxNor_Conc(df))
-    plt.savefig(input_path+"_MaxNor_Conc.png")
+    plt.savefig("result/"+input_path+"_MaxNor_Conc.png")
     plt.show(block=False)
     plt.close()
     plot(df, Base_Conc(df))
-    plt.savefig(input_path+"_Base_Conc.png")
+    plt.savefig("result/"+input_path+"_Base_Conc.png")
     plt.show(block=False)
     plt.close()
