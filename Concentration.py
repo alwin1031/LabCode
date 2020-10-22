@@ -35,6 +35,7 @@ def Base_Conc(df):
 
     return baseline
 
+# Figure parameters
 def plot(df, type_what):
     plt.plot(df["nm"], type_what,c = "black", lw=0.5)
     plt.axis([250, 750, -0.5, 2]) #[xmin, xmax, ymin, ymax]
